@@ -1,5 +1,7 @@
-const Controller = require('./news-controllers');
+const NewsController = require('./news-controllers');
+const PostController = require('./post-controllers');
 
 module.exports = {
-  Controller,
+  PostController,
+  NewsController,
 };

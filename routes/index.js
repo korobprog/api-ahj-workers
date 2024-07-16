@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const { Controller } = require('../controller');
+const { NewsController, PostController } = require('../controller');
 
 const uploadsDestination = 'uploads';
 
@@ -14,6 +14,7 @@ const storage = multer.diskStorage({
 
 const uploads = multer({ storage: storage });
 
-router.post('/post', Controller.post);
+router.post('/post', PostController.post);
+router.get('/news', NewsController.news);
 
 module.exports = router;
